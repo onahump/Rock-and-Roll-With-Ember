@@ -1,22 +1,27 @@
 import Route from '@ember/routing/route';
 import EmberObject from '@ember/object';
 
-export default Route.extend({
+   var Song = EmberObject.extend({
+    title: '',
+    band: '',
+    ranking: 0
+   });
 
+export default Route.extend({
   model: function(){
-    var blackDog = EmberObject.create({
+    var blackDog = Song.create({
       title: 'Black Dog',
       band: 'Led Zepellin',
       rating: 3
     });
 
-    var yellowLedbetter = EmberObject.create({
+    var yellowLedbetter = Song.create({
       title: 'Yellow Ledbetter',
       band: 'Pearl Jam',
       rating: 4
     })
 
-    var pretender = EmberObject.create({
+    var pretender = Song.create({
       title: 'I wanna be to Sedated',
       band: 'The Ramones',
       rating: 2
